@@ -6,7 +6,6 @@ create virtual env:
 
 
 create project:
-
     django-admin startproject first_project
 
 run project:
@@ -15,3 +14,8 @@ run project:
 
 new application:
     python manage.py startapp first_app
+
+
+migration:
+    python manage.py makemigrations first_app
+    python manage.py migrate {app_name}
