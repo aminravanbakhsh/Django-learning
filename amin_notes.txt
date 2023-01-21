@@ -1,0 +1,17 @@
+create virtual env:
+
+    virtualenv -p python3 quera_django
+    source quera_django/bin/activate
+    pip install django
+
+
+create project:
+
+    django-admin startproject first_project
+
+run project:
+    python manage.py runserver
+    http://127.0.0.1:800
+
+new application:
+    python manage.py startapp first_app
