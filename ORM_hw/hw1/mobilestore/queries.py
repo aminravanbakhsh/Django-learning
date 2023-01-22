@@ -27,19 +27,5 @@ def all_mobiles_with_brand_of(brand_name):
 
 
 def all_available_mobiles_with_price_in_range(min_price, max_price):
-    query = Mobile.objects.filter(price__gte=min_price).filter(price__lte=max_price).count()
+    query = Mobile.objects.filter(is_available=True).filter(price__gte=min_price).filter(price__lte=max_price).count()
     return query
-
-
-"""
-from mobilestore.queries import *
-from mobilestore.models import *
-53060000
-60000000
-600000000
-600000000
-83123431, 53060000
-all_available_mobiles_with_price_in_range(53060000, 83123431)
-Mobile.objects.filter(price__lte=max_price).filter(price__gte=min_price).count()
-"""
-
