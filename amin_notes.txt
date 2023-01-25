@@ -19,3 +19,6 @@ new application:
 migration:
     python manage.py makemigrations first_app
     python manage.py migrate {app_name}
+
+kill process on port:
+    sudo fuser -k 8000/tcp
